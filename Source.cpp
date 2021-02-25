@@ -92,7 +92,7 @@ int main(int argc, char* argv[])
         }
             
         temp = SDL_GetTicks();
-        if (temp - lastTime >= TIME_FOR_STEP)
+        if (temp - lastTime >= TIME_FOR_STEP)   //frametime sync using SDL timer for stable game speed 
         {
             if (!gameOver)
             {
@@ -103,7 +103,7 @@ int main(int argc, char* argv[])
                     gameField.addScore(moveResult);
             }
 
-            switch (lastPressedKey)
+            switch (lastPressedKey) //snake can't turn full 180 in 1 frame
             {
             case SDLK_a: case SDLK_LEFT:
                 if (direction != RIGHT)
