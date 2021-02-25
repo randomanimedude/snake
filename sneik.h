@@ -27,7 +27,7 @@ public:
 	int getScore() { return score; }
 };
 
-enum Direction{UP, DOWN, LEFT, RIGHT};
+enum Direction{UP, DOWN, LEFT, RIGHT};//snake is using Direction to move and store last input
 
 class Snake
 {
@@ -41,7 +41,7 @@ private:
 
 public:
 	void grow();
-	Snake(SDL_Texture*, SDL_Texture*, int, int, int, int, int, int);
-	int move(Direction, int, int, Fruit&);// , std::vector<Fruit>&);
+	Snake(SDL_Texture*, SDL_Texture*, int, int, int, int, int, int); //head and body textures, starting position(x,y), height, width, size of one sprite and screen height reserved for UI
+	int move(Direction, int, int, Fruit&);
 	void draw(SDL_Renderer*);
 };
