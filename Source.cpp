@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     srand(time(0));
 
 
-    if (SDL_Init(SDL_INIT_EVERYTHING) == -1)            //початкова ініціалізація та обробка помилок
+    if (SDL_Init(SDL_INIT_EVERYTHING) == -1)            //SDL require initialization at the start of the program
         return 1;
     window = SDL_CreateWindow("snake", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (window == nullptr)
